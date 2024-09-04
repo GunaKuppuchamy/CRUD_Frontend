@@ -1,0 +1,37 @@
+  /* .nbar {
+    display: flex;
+    justify-content: space-between;
+  } */
+  .din {
+    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .d1 {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+  li {
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 9px;
+    /* color: black; */
+  }
+
+  a:hover {
+    background-color: brown;
+  }
+
+  .table {
+    border: "2px solid black";
+    border-collapse: collapse;
+  }
