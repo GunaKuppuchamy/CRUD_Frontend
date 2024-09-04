@@ -49,8 +49,8 @@ const UserList = () => {
                 amount: amount
             }
             alert(id)
-            axios.put(`http://localhost:3001/${id}`, data).then((res) => {
-                alert(res);
+            axios.put(`http://localhost:3002/${id}`, data).then((res) => {
+                // alert(res);
                 setExpense([...res.data]);
             }).catch((err) => { console.log(err) });
             setIsEdit(false);
@@ -86,12 +86,14 @@ const UserList = () => {
     const handleDelete = (exp) => {
         // setId(exp._id);
         
-        console.log(exp);
-        axios.delete(`http://localhost:3001/${exp}`)
+        // console.log(exp);
+        axios.delete(`http://localhost:3002/${exp}`)
             .then((res) => {
-                alert(res.data)
+                // alert(res.data)
+                toast.success(res);
+
             }).catch((err) => { console.log(err) });
-            alert("delete called");
+            // alert("delete called");
         // let deletedArray = expense.filter((data) => data.id != id);
         // setExpense(deletedArray);
     }
