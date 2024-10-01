@@ -87,10 +87,11 @@ const UserList = () => {
         
         console.log(exp);
         axios.delete(`https://backend-crud-8cuo.onrender.com/${exp}`)
-            .then((res) => {
-                alert(res.data)
-            }).catch((err) => { console.log(err) });
-            alert("delete called");
+            // .then((res) => {
+            //     alert(res.data)
+            // })
+            .catch((err) => { console.log(err) });
+            // alert("delete called");
         // let deletedArray = expense.filter((data) => data.id != id);
         // setExpense(deletedArray);
     }
