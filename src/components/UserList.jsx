@@ -10,7 +10,7 @@ const UserList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/ad");
+                const response = await axios.get("http://localhost:3002/ad");
                 setExpense(response.data);
                 // console.log(expense);
             } catch (error) {
@@ -33,7 +33,7 @@ const UserList = () => {
         e.preventDefault();
         if (!isEdit) {
             if (amount != 0) {
-                const response = await axios.post("http://localhost:3001/add", {
+                const response = await axios.post("http://localhost:3002/add", {
                     category: category,
                     amount: amount
                 });
@@ -86,12 +86,10 @@ const UserList = () => {
     const handleDelete = (exp) => {
         // setId(exp._id);
         
-        // console.log(exp);
+        console.log(exp);
         axios.delete(`http://localhost:3002/${exp}`)
             .then((res) => {
-                // alert(res.data)
-                toast.success(res);
-
+                alert(res.data)
             }).catch((err) => { console.log(err) });
             // alert("delete called");
         // let deletedArray = expense.filter((data) => data.id != id);
