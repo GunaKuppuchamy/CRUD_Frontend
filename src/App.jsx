@@ -12,21 +12,6 @@ import UserList from './components/UserList'
 
 
 function App() {
-
-  // const [expense, setExpense] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get("http://localhost:3001/ad");
-  //       setExpense(response.data)
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   fetchData()
-  // }, [])
-  // console.log(expense)
   return (
     <>
       {/* <Navbar /> */}
