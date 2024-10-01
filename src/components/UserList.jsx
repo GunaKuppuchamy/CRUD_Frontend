@@ -48,7 +48,7 @@ const UserList = () => {
                 category: category,
                 amount: amount
             }
-            alert(id)
+            // alert(id)
             axios.put(`http://localhost:3002/${id}`, data).then((res) => {
                 // alert(res);
                 setExpense([...res.data]);
@@ -63,11 +63,10 @@ const UserList = () => {
     }
     const handleEdit = (exp) => {
         setId(exp._id)
-        // alert(id)
         setCategory(exp.category);
         setAmount(exp.amount);
         setIsEdit(true);
-        // handleChange();
+        handleChange();
 
 
 
@@ -91,7 +90,7 @@ const UserList = () => {
             .then((res) => {
                 alert(res.data)
             }).catch((err) => { console.log(err) });
-            // alert("delete called");
+            alert("delete called");
         // let deletedArray = expense.filter((data) => data.id != id);
         // setExpense(deletedArray);
     }
@@ -103,18 +102,8 @@ const UserList = () => {
                 <div >amount  :<input type='number' value={amount} required placeholder='amount' onChange={(e) => setAmount(e.target.value)} /></div>
                 <button type='submit' >Add</button>
             </form>
-
-
+            
             <h1>Users</h1>
-           
-
-
-
-
-
-
-
-
             <table className='table' border={1}>
                 <thead >
                     <th>Date</th>
