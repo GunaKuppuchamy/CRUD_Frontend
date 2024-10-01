@@ -10,7 +10,7 @@ const UserList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:3002/ad");
+                const response = await axios.get("https://backend-crud-8cuo.onrender.com/ad");
                 setExpense(response.data);
                 // console.log(expense);
             } catch (error) {
@@ -33,7 +33,7 @@ const UserList = () => {
         e.preventDefault();
         if (!isEdit) {
             if (amount != 0) {
-                const response = await axios.post("http://localhost:3002/add", {
+                const response = await axios.post("https://backend-crud-8cuo.onrender.com/add", {
                     category: category,
                     amount: amount
                 });
@@ -49,7 +49,7 @@ const UserList = () => {
                 amount: amount
             }
             // alert(id)
-            axios.put(`http://localhost:3002/${id}`, data).then((res) => {
+            axios.put(`https://backend-crud-8cuo.onrender.com/${id}`, data).then((res) => {
                 // alert(res);
                 setExpense([...res.data]);
             }).catch((err) => { console.log(err) });
@@ -86,7 +86,7 @@ const UserList = () => {
         // setId(exp._id);
         
         console.log(exp);
-        axios.delete(`http://localhost:3002/${exp}`)
+        axios.delete(`https://backend-crud-8cuo.onrender.com/${exp}`)
             .then((res) => {
                 alert(res.data)
             }).catch((err) => { console.log(err) });
