@@ -21,16 +21,16 @@ const UserList = () => {
             const token = localStorage.getItem("UserToken");
 
             try {
-                const result = await axios.get("http://localhost:3002/home", {
+                const result = await axios.get("https://backend-crud-8cuo.onrender.com/home", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 });
                 if (result.data.status !== "Success") {
-                    navigate("/contact");
+                    navigate("/");
                 }
             } catch (error) {
-                navigate("/contact");
+                navigate("/");
             }
         };
 

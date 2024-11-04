@@ -16,12 +16,13 @@ export default function Login() {
         const navigate = useNavigate();
 
 
-                const submit = async ()=>
+                const submit = async (e)=>
                 {
-                    // e.preventDefault();
+                    e.preventDefault();
                     // alert(password);
                     
-                     await axios.post("http://localhost:3002/login",{email,password})
+                    //  await axios.post("http://localhost:3002/login",{email,password})
+                    await axios.post("https://backend-crud-8cuo.onrender.com/login",{email,password})
                     .then((res)=>{
                         if(res.data.status==="success"){
                             localStorage.setItem("UserToken",res.data.token);
@@ -38,8 +39,8 @@ export default function Login() {
                 }
     return (
         <div className='div1'>
-            <form className='RegForm' style={{ margin: 'ons20px 20px 20px 20px', lineHeight: '60px' }} onSubmit={()=>{
-                submit()
+            <form className='RegForm' style={{ margin: 'ons20px 20px 20px 20px', lineHeight: '60px' }} onSubmit={(e)=>{
+                submit(e)
             }} >
                 <div className='div2'>
                 <p>

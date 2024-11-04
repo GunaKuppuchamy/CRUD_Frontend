@@ -14,7 +14,9 @@ const Signup = () => {
 
  const submit=async (e)=>{
 e.preventDefault();
-await axios.post("http://localhost:3002/user",{name,email,phone,password})
+// await axios.post("http://localhost:3002/user",{name,email,phone,password})
+await axios.post("https://backend-crud-8cuo.onrender.com/user",{name,email,phone,password})
+
 .then((res)=>{
     if(res.data==="Account created"){
         toast.success("Account created");
@@ -36,16 +38,16 @@ await axios.post("http://localhost:3002/user",{name,email,phone,password})
             }} >
                 <div className='div2'>
                 <p>
-                    <input type='text' placeholder='Username' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setname(e.target.value)}}></input>
+                    <input type='text' required placeholder='Username' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setname(e.target.value)}}></input>
                 </p>
                 <p>
-                    <input type='email' placeholder='Email' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setemail(e.target.value)}}></input>
+                    <input type='email' required placeholder='Email' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setemail(e.target.value)}}></input>
                 </p>
                 <p>
-                    <input type='number' placeholder='PhoneNumber' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setphone(e.target.value)}}></input>
+                    <input type='number' required placeholder='PhoneNumber' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setphone(e.target.value)}}></input>
                 </p>
                 <p>
-                    <input type='password' placeholder='Password' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setpassword(e.target.value)}}></input>
+                    <input type='password' required placeholder='Password' style={{ padding: '10px 10px 10px 10px' }} onChange={(e)=>{Setpassword(e.target.value)}}></input>
                 </p>
                 {/* <p className='file'>
                  <input type="file"  accept="image/*" required onChange={(e)=>{Setfile(e.target.files[0])}} />
