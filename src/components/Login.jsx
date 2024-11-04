@@ -32,7 +32,7 @@ export default function Login() {
                         }
                         else{
                             alert("invalid credinals");
-                            navigate("/login");
+                            navigate("/");
                         }
                     })
                     
