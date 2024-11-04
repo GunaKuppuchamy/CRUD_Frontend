@@ -5,34 +5,8 @@ function About() {
 
         <div>
             <Navbar/>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-            <h1>sdfghjkl</h1>
-
+            <h1>Hello! I am K.GUNA</h1>
+            <h2>This is site where I learned crud operations in mern such as create, read, update and delete.</h2>
         </div>
     )
 }
